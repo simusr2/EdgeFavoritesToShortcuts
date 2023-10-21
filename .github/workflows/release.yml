@@ -22,24 +22,24 @@ jobs:
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 8.0.100
+          dotnet-version: 7.0.402
 
       - name: Build
         shell: bash
         run: |
           tag=$(git describe --tags --abbrev=0)
-          release_name="App-$tag-${{ matrix.target }}"
+          release_name="EdgeFavoritesToShortcuts-$tag-${{ matrix.target }}"
 
           # Build everything
-          dotnet publish EdgeFavoritesToShortcuts/EdgeFavoritesToShortcuts.csproj --framework net6.0 --runtime "${{ matrix.target }}" -c Release -o "$release_name"
+          dotnet publish EdgeFavoritesToShortcuts/EdgeFavoritesToShortcuts.csproj --framework net6.0-windows --runtime "${{ matrix.target }}" --no-self-contained -p:PublishSingleFile=true -c Release -o "$release_name"
 
           # Pack files
-          if [ "${{ matrix.target }}" == "win-x64" ]; then
+          #if [ "${{ matrix.target }}" == "win-x64" ]; then
             # Pack to zip for Windows
-            7z a -tzip "${release_name}.zip" "./${release_name}/*"
-          else
-          tar czvf "${release_name}.tar.gz" "$release_name"
-          fi
+            #7z a -tzip "${release_name}.zip" "./${release_name}/*"
+          #else
+          #tar czvf "${release_name}.tar.gz" "$release_name"
+          #fi
 
           # Delete output directory
           rm -r "$release_name"
@@ -47,6 +47,6 @@ jobs:
       - name: Publish
         uses: softprops/action-gh-release@v1
         with:
-          files: "App*"
+          files: "EdgeFavoritesToShortcuts*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
