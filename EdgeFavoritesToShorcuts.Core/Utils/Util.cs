@@ -1,18 +1,21 @@
-﻿using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
-namespace EdgeFavoritesToShorcuts.Core.Utils
+namespace EdgeFavoritesToShorcuts.Core.Utils;
+
+/// <summary>
+/// Generic utilities
+/// </summary>
+static partial class Util
 {
-    static class Util
+    /// <summary>
+    /// Replace invalid chars with '_' from filename
+    /// </summary>
+    /// <param name="name">Filename</param>
+    /// <returns>Valid filename</returns>
+    public static string MakeValidFileName(string name)
     {
-        public static string MakeValidFileName(string name)
-        {
-            name = string.Join(" ", new Regex("[ -~]+").Matches(name).Select(m => m.Value));
-            //+ new string(Path.GetInvalidPathChars()
-            name = new Regex(string.Format("[{0}]", Regex.Escape(new string(Path.GetInvalidFileNameChars())))).Replace(name, "_");
-
-            return name;
-        }
+        string escapedName = Regex.Escape(new string(Path.GetInvalidFileNameChars()));
+        name = new Regex(string.Format("[{0}]", escapedName)).Replace(name, "_");
+        return name;
     }
 }

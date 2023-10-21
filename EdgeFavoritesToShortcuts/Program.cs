@@ -25,9 +25,9 @@ RootCommand rootCommand = new RootCommand
 
 rootCommand.SetHandler((userArgument, outputFolderArgument, deleteArgument) =>
 {
-    EdgeFavorites favorites = EdgeFavorites.FromUserFile(userArgument);
-    favorites.SaveShortcuts(outputFolderArgument);
-    if (deleteArgument)
+    EdgeFavorites? favorites = EdgeFavorites.FromUserFile(userArgument);
+    favorites?.SaveShortcuts(outputFolderArgument);
+    if (favorites != null && deleteArgument)
     {
         EdgeFavorites.DeleteFile(userArgument);
     }

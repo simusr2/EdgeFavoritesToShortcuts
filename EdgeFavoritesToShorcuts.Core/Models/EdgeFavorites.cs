@@ -8,10 +8,10 @@ namespace EdgeFavoritesToShortcuts.Core.Models
         public string Checksum { get; set; } = "";
 
         [JsonPropertyName("roots")] 
-        public Roots Roots { get; set; }
+        public Roots? Roots { get; set; }
 
         [JsonPropertyName("sync_metadata")] 
-        public string SyncMetadata { get; set; }
+        public string? SyncMetadata { get; set; }
 
         [JsonPropertyName("version")] 
         public long Version { get; set; }
