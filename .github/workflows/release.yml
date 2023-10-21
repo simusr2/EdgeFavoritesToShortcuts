@@ -41,12 +41,14 @@ jobs:
           #tar czvf "${release_name}.tar.gz" "$release_name"
           #fi
 
+          mv ./${release_name}/EdgeFavoritesToShortcuts.exe ./EdgeFavoritesToShortcuts.exe
+
           # Delete output directory
           rm -r "$release_name"
 
       - name: Publish
         uses: softprops/action-gh-release@v1
         with:
-          files: "EdgeFavoritesToShortcuts*"
+          files: "EdgeFavoritesToShortcuts.exe"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
