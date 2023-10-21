@@ -1,19 +1,20 @@
 ﻿using EdgeFavoritesToShortcuts.Core.Models;
 using System.CommandLine;
-using static System.Environment;
 
 Option<string> outputFolderArgument = new Option<string>
     (name: "--output-folder",
-    description: "Bookmarks destination folder.",
-    getDefaultValue: () => Path.Combine(GetFolderPath(SpecialFolder.DesktopDirectory), "Bookmarks"));
+     description: "Bookmarks destination folder.",
+     getDefaultValue: () => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Bookmarks"));
+
 Option<string> userArgument = new Option<string>
     (name: "--user",
-    description: "Name of the user to use to extract bookmarks.",
-    getDefaultValue: () => Environment.UserName);
+     description: "Name of the user to use to extract bookmarks.",
+     getDefaultValue: () => Environment.UserName);
+
 Option<bool> deleteArgument = new Option<bool>
     (name: "--delete",
-    description: "Delete after extraction.",
-    getDefaultValue: () => false);
+     description: "Delete after extraction.",
+     getDefaultValue: () => false);
 
 RootCommand rootCommand = new RootCommand
 {

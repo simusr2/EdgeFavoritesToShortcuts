@@ -5,7 +5,12 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdgeFavoritesToShortcuts", "EdgeFavoritesToShortcuts\EdgeFavoritesToShortcuts.csproj", "{AEE8AB58-678C-4E11-9A7B-36C353DC81B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeFavoritesToShorcuts.Core", "EdgeFavoritesToShorcuts.Core\EdgeFavoritesToShorcuts.Core.csproj", "{87F480B5-5A9D-4551-80EF-23E0CF16A75E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdgeFavoritesToShorcuts.Core", "EdgeFavoritesToShorcuts.Core\EdgeFavoritesToShorcuts.Core.csproj", "{87F480B5-5A9D-4551-80EF-23E0CF16A75E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementi di soluzione", "Elementi di soluzione", "{42B87796-4E4A-4AF9-87DB-2B6ED6FCD6A9}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
