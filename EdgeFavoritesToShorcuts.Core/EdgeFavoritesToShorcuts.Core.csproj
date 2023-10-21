@@ -15,9 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Interop.IWshRuntimeLibrary">
-      <HintPath>..\EdgeFavoritesToShortcuts\obj\Debug\net6.0-windows\Interop.IWshRuntimeLibrary.dll</HintPath>
-    </Reference>
+    <PackageReference Include="DK.WshRuntime" Version="4.1.3.201115164" />
   </ItemGroup>
 
 </Project>

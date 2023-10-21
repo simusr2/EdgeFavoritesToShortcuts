@@ -100,9 +100,7 @@ public partial class EdgeFavorites
             string url = favorite.Url ?? "";
             try
             {
-                IWshShortcut shortcut = (IWshShortcut)new WshShell().CreateShortcut(destination + ".lnk");
-                shortcut.TargetPath = url;
-                shortcut.Save();
+                DK.WshRuntime.WshInterop.CreateShortcut(destination + ".lnk", "", url, "", "");
             }
             catch (Exception ex)
             {
