@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdgeFavoritesToShortcuts", "EdgeFavoritesToShortcuts\EdgeFavoritesToShortcuts.csproj", "{AEE8AB58-678C-4E11-9A7B-36C353DC81B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeFavoritesToShorcuts.Core", "EdgeFavoritesToShorcuts.Core\EdgeFavoritesToShorcuts.Core.csproj", "{87F480B5-5A9D-4551-80EF-23E0CF16A75E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEE8AB58-678C-4E11-9A7B-36C353DC81B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE8AB58-678C-4E11-9A7B-36C353DC81B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE8AB58-678C-4E11-9A7B-36C353DC81B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE8AB58-678C-4E11-9A7B-36C353DC81B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F480B5-5A9D-4551-80EF-23E0CF16A75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F480B5-5A9D-4551-80EF-23E0CF16A75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F480B5-5A9D-4551-80EF-23E0CF16A75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F480B5-5A9D-4551-80EF-23E0CF16A75E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99A70A37-70B5-4EF0-84F0-08247E8475B4}
+	EndGlobalSection
+EndGlobal

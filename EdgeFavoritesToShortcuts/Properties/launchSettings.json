@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "EdgeFavoritesToShortcuts": {
+      "commandName": "Project",
+      "commandLineArgs": "--user \"Simone Anile\""
+    }
+  }
+}
